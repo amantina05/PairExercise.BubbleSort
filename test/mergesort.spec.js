@@ -27,7 +27,7 @@ describe('Merge Sort function', function() {
 });
 
 describe('Merge Sort function2', function() {
-  let arrToSort = [{ age: 4 }, { age: 8 }, { age: 2 }, { age: 9 }];
+  let arrToSort = [{ age: 9 }, { age: 8 }, { age: 2 }, { age: 4 }];
   const comparator1 = (a, b) => {
     // return a.age < b.age;
     // return a.age > b.age;

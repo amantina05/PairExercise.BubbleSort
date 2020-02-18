@@ -49,6 +49,7 @@ function mergeSort(array, comparator = lt) {
   left = mergeSort(left, comparator);
   right = mergeSort(right, comparator);
   let merged = merge(left, right, comparator);
+  console.log(merged);
   return merged;
 }
 
