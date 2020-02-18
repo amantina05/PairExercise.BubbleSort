@@ -20,5 +20,8 @@ describe('Merge function', function() {
 describe('Merge Sort function', function() {
   it('is able to sort an array', function() {
     expect(mergeSort([2, 9, 7, 3, 4])).to.be.deep.equal([2, 3, 4, 7, 9]);
+    expect(
+      mergeSort([8, 2, 5, 11, 3, 123, 54, 125, -12, -54, 7312, 1])
+    ).to.be.deep.equal([-54, -12, 1, 2, 3, 5, 8, 11, 54, 123, 125, 7312]);
   });
 });

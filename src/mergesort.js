@@ -7,16 +7,20 @@ function split(wholeArray) {
   return [firstHalf, secondHalf];
 }
 
-function merge(array1, array2) {
+function lt(a, b) {
+  return a < b;
+}
+
+function merge(array1, array2, comparator = lt) {
   let i = 0;
   let j = 0;
 
   const mergedArr = [];
   while (array1[i] && array2[j]) {
-    if (array1[i] < array2[j]) {
+    if (comparator(array1[i], array2[j])) {
       mergedArr.push(array1[i]);
       i++;
-    } else if (array1[i] > array2[j]) {
+    } else if (comparator(array2[j], array1[i])) {
       mergedArr.push(array2[j]);
       j++;
     }
