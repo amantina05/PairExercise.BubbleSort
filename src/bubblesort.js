@@ -8,7 +8,6 @@ function bubbleSort(array, index = array.length - 1, comparator) {
     if (comparator(array[i], array[j]) === 1) {
       [array[i], array[j]] = [array[j], array[i]];
     }
-
     i += 1;
     j += 1;
   }
