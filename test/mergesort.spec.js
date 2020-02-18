@@ -25,3 +25,19 @@ describe('Merge Sort function', function() {
     ).to.be.deep.equal([-54, -12, 1, 2, 3, 5, 8, 11, 54, 123, 125, 7312]);
   });
 });
+
+describe('Merge Sort function2', function() {
+  let arrToSort = [{ age: 4 }, { age: 8 }, { age: 2 }, { age: 9 }];
+  const comparator1 = (a, b) => {
+    // return a.age < b.age;
+    // return a.age > b.age;
+    if (a.age < b.age) return -1;
+    if (a.age > b.age) return 1;
+    return 0;
+  };
+  it('is able to take an additional parameter', function() {
+    expect(mergeSort(arrToSort, comparator1)).to.be.deep.equal(
+      arrToSort.sort(comparator1)
+    );
+  });
+});
