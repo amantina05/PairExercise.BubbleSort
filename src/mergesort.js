@@ -1,6 +1,4 @@
 function split(wholeArray) {
-  /* your code here to define the firstHalf and secondHalf arrays */
-
   let mid = wholeArray.length / 2;
   mid = Math.floor(mid);
 
@@ -35,4 +33,18 @@ function merge(array1, array2) {
   return mergedArr;
 }
 
-module.exports = { split, merge };
+function mergeSort(array) {
+  if (array.length === 1) {
+    return array;
+  }
+
+  let [left, right] = split(array);
+
+  left = mergeSort(left);
+  right = mergeSort(right);
+  let merged = merge(left, right);
+  console.log(merged);
+  return merged;
+}
+
+module.exports = { split, merge, mergeSort };
